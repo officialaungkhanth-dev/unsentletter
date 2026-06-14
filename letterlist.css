@@ -1,0 +1,219 @@
+body {
+  background: url('./images/paper-texture.jpg') repeat !important; /* use your PNG file */
+  background-size: cover; /* scale to fit screen */
+  font-family: 'Caveat', cursive; /* handwritten style */
+  color: #333;
+  line-height: 1.6;
+}
+
+
+
+header{
+      border-bottom:1px solid var(--border);
+      background:#fff8;
+      backdrop-filter:blur(8px);
+    }
+
+strong{
+    text-align: center;
+}
+
+.container{
+      max-width:100%;
+      margin:0 auto;
+      padding:16px;
+    }
+
+nav{
+      float: right;
+      display:flex;
+      justify-content:space-between;
+      align-items:right;
+    }
+
+
+nav button{
+      font-size: 18px;
+      font-family: 'Patrick Hand', cursive;
+      background:none;
+      border:1px solid var(--border);
+      padding:6px 12px;
+      border-radius:14px;
+      cursor:pointer;
+    }
+  
+nav button:hover {
+  color: #595454;
+}
+
+h1{
+        text-align: center;
+    }
+
+.home{
+    text-align: center;
+}
+
+
+.hero-title {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+hr{
+  width: 35%;
+  color: #1f232892;
+}
+
+/* Search Box Styling */
+.search-container {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.search-box {
+  width: 250px;
+  padding: 10px 35px 10px 10px; /* extra right padding for icon */
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-family: 'Patrick Hand', cursive;
+  font-size: 16px;
+  background: #fffaf5 url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat right 10px center;
+  background-size: 18px; /* size of magnifier */
+}
+
+.search-box:focus {
+  outline: none;
+  border-color: #999;
+}
+
+.search-btn {
+  margin-left: 10px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  background-color: #333;
+  color: #fff;
+  font-family: 'Patrick Hand', cursive;
+  cursor: pointer;
+}
+
+.search-btn:hover {
+  background-color: #555;
+}
+
+.card-container {
+
+  display: flex;
+  flex-wrap: wrap;       /* allows wrapping to next row */
+  gap: 20px;
+  width: 50%;
+  margin: 5% auto;
+
+}
+
+/* Card Styling */
+.card {
+  position: relative;
+  flex: 0 0 25%;
+  box-sizing: border-box;
+  background: url(./images/line-paper-texture.jpg);
+  background: repeating-linear-gradient(
+    to bottom,
+    #fffdf5,
+    #fffdf5 24px,
+    #e0e0e0 25px
+  );
+  padding: 20px;
+  width: 10%;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(120, 100, 80, 0.5); /* paper shadow */
+  font-family: 'Patrick Hand', cursive;
+  font-size: 18px;
+}
+
+
+.card p {
+  line-height: 25px; /* matches the background line spacing */
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.card h3 {
+  margin-top: 0;
+  font-family: 'Patrick Hand', cursive;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+
+.read-btn {
+  position: absolute;
+  bottom: -10px;
+  right: -10px;
+  background-color: #c9c9c9ac;
+  color: #000000ac;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-family: 'Open Sans', sans-serif;
+  cursor: pointer;
+
+}
+
+.read-btn:hover {
+  background-color: #7E1C1C;
+  color: #c9c9c9;
+}
+
+
+/* --- MOBILE RESPONSIVE RULES --- */
+
+@media (max-width: 768px) {
+  /* 1. Center the Navigation */
+  nav {
+    float: none; /* Float can cause weird wrapping on mobile */
+    justify-content: center; 
+    margin-bottom: 15px;
+  }
+
+  /* 2. Expand the Main Container */
+  .card-container {
+    width: 90%; /* Expand from 50% to 90% so it uses the whole phone screen */
+    margin: 5% auto;
+    flex-direction: column; /* Stack the cards vertically */
+  }
+
+  /* 3. Make Cards Full Width */
+  .card {
+    flex: 0 0 100%; /* Forces each card to take up the whole row */
+    width: 100%; /* Overrides the previous width: 10% */
+    margin: 15px 0; /* Adds spacing between the stacked cards */
+  }
+
+  /* 4. Adjust the Title Line */
+  hr {
+    width: 70%; /* Make the line a bit wider on mobile */
+  }
+
+  /* 5. Search Bar adjustments */
+  .search-container {
+    flex-direction: column; /* Stack the input and button */
+    align-items: center;
+    gap: 10px; 
+  }
+  
+  .search-box {
+    width: 80%; /* Let the input breathe a bit more */
+  }
+  
+  .search-btn {
+    margin-left: 0; /* Remove left margin since it's stacked now */
+    width: 50%; /* Make the button wider and easier to tap */
+  }
+}

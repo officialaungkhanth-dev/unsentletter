@@ -1,0 +1,131 @@
+body {
+  background: url('./images/paper-texture.jpg') repeat !important; /* use your PNG file */
+  background-size: cover; /* scale to fit screen */
+  font-family: 'Caveat', cursive; /* handwritten style */
+  color: #333;
+  line-height: 1.6;
+}
+
+header{
+      border-bottom:1px solid var(--border);
+      background:#fff8;
+      backdrop-filter:blur(8px);
+    }
+
+strong{
+    text-align: center;
+}
+
+.container{
+      max-width:100%;
+      margin:0 auto;
+      padding:16px;
+    }
+
+nav{
+      float: right;
+      display:flex;
+      justify-content:space-between;
+      align-items:right;
+    }
+
+
+nav button{
+      font-size: 18px;
+      font-family: 'Patrick Hand', cursive;
+      background:none;
+      border:1px solid var(--border);
+      padding:6px 12px;
+      border-radius:14px;
+      cursor:pointer;
+    }
+  
+nav button:hover {
+  color: #595454;
+}
+
+h1{
+        text-align: center;
+    }
+
+.home{
+    text-align: center;
+}
+
+
+.hero-title {
+  font-family: 'Patrick Hand', cursive;
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+hr{
+  width: 35%;
+  color: #1f232892;
+}
+
+
+.hero-text {
+  font-family: 'Roboto', sans-serif;
+  font-weight: bolder;
+  font-size: 22px;
+  line-height: 1.4;
+  color: #3a3a3a;
+  margin-bottom: 5%;
+  margin-top: 15%;
+}
+
+
+.letterlist{
+    text-align: center;
+    margin-top: 0%;
+}
+
+.envelope-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.envelope-btn img {
+  width: 250px;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 0 6px rgb(56, 11, 11));
+}
+
+.envelope-btn:hover {
+  transform: scale(1.05);
+}
+
+/* --- MOBILE RESPONSIVE RULES --- */
+
+@media (max-width: 768px) {
+  
+  /* 1. Fix the Navigation (Remove the float) */
+  nav {
+    float: none; 
+    justify-content: center; 
+    padding-bottom: 15px;
+  }
+
+  /* 2. Adjust Hero Text Spacing and Size */
+  .hero-text {
+    margin-top: 20px; /* Switch to a fixed pixel value for predictable spacing */
+    font-size: 18px; /* Scale the text down slightly for small screens */
+    padding: 0 15px; /* Add padding so text doesn't touch the edges */
+  }
+
+  /* 3. Make the Envelope Responsive */
+  .envelope-btn img {
+    width: 100%; /* Tell it to take up available space... */
+    max-width: 250px; /* ...but never grow larger than 250px */
+    margin-top: 50px;
+  }
+
+  /* 4. Tweak the horizontal rule */
+  hr {
+    width: 60%; /* Make the line wider on mobile so it's more visible */
+  }
+}
