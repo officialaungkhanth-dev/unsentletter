@@ -116,8 +116,8 @@ hr{
 
 .secret {
   position: absolute;
-  bottom: -20px;       /* pushes it above the card */
-  right: -20px;     /* pushes it outside to the right */
+  bottom: -130px;       /* pushes it above the card */
+  right: 560px;     /* pushes it outside to the right */
 
   border-radius: 25%;
   width: 70px;      /* large circle */
